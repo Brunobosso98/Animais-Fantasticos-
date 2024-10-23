@@ -1,4 +1,4 @@
-export default class initTabNav {
+export default class TabNav {
   constructor(menu, content) {
     this.tabMenu = document.querySelectorAll(menu);
     this.tabContent = document.querySelectorAll(content);
@@ -15,7 +15,7 @@ export default class initTabNav {
   }
 
   // Adiciona os eventos nas tabs
-  addTavNavEvent() {
+  addTabNavEvent() {
     this.tabMenu.forEach((itemMenu, index) => {
       itemMenu.addEventListener("click", () => this.activeTab(index));
     });
@@ -24,8 +24,8 @@ export default class initTabNav {
   init() {
     if (this.tabMenu.length && this.tabContent.length) {
       // Ativar primeiro item
-      this.activeCLass[0];
-      this.addTavNavEvent();
+      this.tabContent[0].classList.add(this.activeCLass);
+      this.addTabNavEvent();
     }
   }
 }
